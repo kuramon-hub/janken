@@ -1,5 +1,4 @@
 loop do
-
 puts "1(グー)  2(チョキ) ３(パー) を選んでね"
 
 #相手の手をランダムで表示する
@@ -24,32 +23,49 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"       
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
                     if direction_type == opponent then
                          puts "おめでとう。あなたの勝ちです！"
                          break
                     else
-                        puts "あなたの負けです。どんまい！"
-                        break
+                        puts "もう一回！"
                     end
                     
             when type_array[0] then #あいこの場合
                puts "あいこです。やり直し！"
 
-            when type_array[1] then #負けた場合
+            when type_array[2] then #負けた場合
                puts "向く方向を選んでね"
                 puts "1(上) 2(下) 3(左) 4(右)"
                 direction_type = gets.to_s
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"   
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
+               
                     if direction_type == opponent then
                          puts "あなたの負けです。どんまい！"
                          break
                     else
-                        puts "おめでとう。あなたの勝ちです！"
-                        break
+                        puts "もう一回！"
                     end
         end
             
@@ -66,11 +82,22 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"     
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
+
                     if direction_type == opponent then
                          puts "おめでとう。あなたの勝ちです！"
+                         break
                     else
-                        puts "あなたの負けです。どんまい！"
+                        puts "もう一回！"
                     end
                     
             when type_array[1] then #あいこの場合
@@ -83,11 +110,22 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"   
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
+
                     if direction_type == opponent then
                          puts "あなたの負けです。どんまい！"
+                         break
                     else
-                        puts "おめでとう。あなたの勝ちです！"
+                        puts "もう一回！"
                     end
         end     
 
@@ -104,11 +142,22 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"    
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
+
                     if direction_type == opponent then
                          puts "おめでとう。あなたの勝ちです！"
+                         break
                     else
-                        puts "あなたの負けです。どんまい！"
+                        puts "もう一回！"
                     end
                     
             when type_array[2] then #あいこの場合
@@ -121,15 +170,25 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 direction_type = direction_type.chomp 
                 opponent = direction_array[rand(4)]
                 puts "あなた：#{direction_type}"
-                puts "相手：#{opponent}"                
+                puts "相手：#{opponent}"      
+                if opponent =="上" then
+                    opponent = "1"
+                elsif opponent =="下" then
+                    opponent = "2"
+                elsif opponent =="左" then
+                    opponent = "3"
+                elsif opponent =="右" then
+                    opponent = "4"
+                end
+
                     if direction_type == opponent then
                          puts "あなたの負けです。どんまい！"
+                         break
                     else
-                        puts "おめでとう。あなたの勝ちです！"
+                        puts "もう一回！"
                     end
         end
     else
-      puts "そんな手があったなんて。。。！"
+      puts "そんな手があったなんて。。。やり直してくださいね♪"
     end
-      puts "そんな手があったなんて。。。！"
 end
