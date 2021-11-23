@@ -1,3 +1,5 @@
+loop do
+
 puts "1(グー)  2(チョキ) ３(パー) を選んでね"
 
 #相手の手をランダムで表示する
@@ -12,7 +14,7 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
       when "1" then #グーを出した場合 　
         puts "あなた：グー"
         opponent = type_array[rand(3)]
-        puts"相手：#{opponent}"    
+        puts"相手：#{opponent}"   
         
         case opponent
             when type_array[1] then #勝った場合
@@ -25,8 +27,10 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 puts "相手：#{opponent}"                
                     if direction_type == opponent then
                          puts "おめでとう。あなたの勝ちです！"
+                         break
                     else
                         puts "あなたの負けです。どんまい！"
+                        break
                     end
                     
             when type_array[0] then #あいこの場合
@@ -42,8 +46,10 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
                 puts "相手：#{opponent}"                
                     if direction_type == opponent then
                          puts "あなたの負けです。どんまい！"
+                         break
                     else
                         puts "おめでとう。あなたの勝ちです！"
+                        break
                     end
         end
             
@@ -125,3 +131,5 @@ puts "1(グー)  2(チョキ) ３(パー) を選んでね"
     else
       puts "そんな手があったなんて。。。！"
     end
+      puts "そんな手があったなんて。。。！"
+end
